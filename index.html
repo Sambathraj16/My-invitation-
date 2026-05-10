@@ -3,8 +3,13 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Muthumaari and Sambathraj Engagement</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<meta name="description" content="Join us for the engagement ceremony of Muthumaari and Sambathraj on May 29, 2026 at Navneetha Krishna Kovil Mahal, Sengottai"/>
+<meta name="theme-color" content="#0a3a3a"/>
+<meta property="og:title" content="Muthumaari & Sambathraj Engagement"/>
+<meta property="og:description" content="With divine blessings, we invite you to celebrate our engagement"/>
+<meta property="og:type" content="website"/>
+<title>Muthumaari & Sambathraj - Engagement Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -12,7 +17,10 @@
   --peacock-teal:#0d5f5f;
   --peacock-cyan:#4db8d4;
   --peacock-blue:#1e90ff;
+  --peacock-green:#1a8080;
+  --peacock-purple:#6b4c9a;
   --gold:#d4af37;
+  --light-gold:#e8c547;
   --cream:#fdf8ef;
   --dark-cream:#f5ead6;
   --text:#2c1a0e;
@@ -31,6 +39,9 @@ body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg, v
 @keyframes shimmer{0%,100%{opacity:.3}50%{opacity:1}}
 @keyframes peacockTail{0%{transform:scaleX(1) scaleY(1)}50%{transform:scaleX(1.05) scaleY(1.02)}100%{transform:scaleX(1) scaleY(1)}}
 @keyframes featherFloat{0%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-10px) rotate(5deg)}100%{transform:translateY(0) rotate(-5deg)}}
+@keyframes featherWave{0%{transform:translateX(0) rotate(0deg)}50%{transform:translateX(8px) rotate(-3deg)}100%{transform:translateX(0) rotate(0deg)}}
+@keyframes peacockBreathe{0%,100%{transform:scale(1);box-shadow:0 0 40px rgba(212,175,55,.3)}50%{transform:scale(1.02);box-shadow:0 0 60px rgba(77,184,212,.4)}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(77,184,212,.3),inset 0 0 20px rgba(77,184,212,.1)}50%{box-shadow:0 0 40px rgba(77,184,212,.6),inset 0 0 30px rgba(77,184,212,.2)}}
 
 .hero{
   position:relative;
@@ -43,27 +54,28 @@ body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg, v
   padding:60px 24px;
   overflow:hidden;
   background:linear-gradient(135deg, var(--peacock-dark) 0%, #0d4040 50%, #0a3a3a 100%);
+  border-bottom:3px solid var(--gold);
 }
 
 .hero::before{
   content:'';
   position:absolute;
-  width:900px;
-  height:900px;
+  width:1000px;
+  height:1000px;
   border-radius:50%;
   border:3px solid rgba(212,175,55,.15);
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  animation:pulse 5s ease-in-out infinite;
+  animation:peacockBreathe 6s ease-in-out infinite;
   box-shadow:0 0 50px rgba(77,184,212,.1)
 }
 
 .hero::after{
   content:'';
   position:absolute;
-  width:700px;
-  height:700px;
+  width:750px;
+  height:750px;
   border-radius:50%;
   border:2px solid rgba(77,184,212,.1);
   top:50%;
@@ -73,96 +85,129 @@ body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg, v
   animation-delay:.5s
 }
 
+.peacock-feathers{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:0
+}
+
+.feather{
+  position:absolute;
+  font-size:3rem;
+  opacity:.15;
+  animation:featherWave 4s ease-in-out infinite;
+}
+
+.feather-1{top:5%;left:8%;animation-delay:0s}
+.feather-2{top:15%;right:10%;transform:scaleX(-1);animation-delay:.5s}
+.feather-3{bottom:20%;left:5%;font-size:2.5rem;animation-delay:1s}
+.feather-4{bottom:15%;right:8%;font-size:2.5rem;transform:scaleX(-1);animation-delay:1.5s}
+.feather-5{top:40%;left:3%;font-size:2rem;animation-delay:.8s}
+.feather-6{top:35%;right:3%;font-size:2rem;transform:scaleX(-1);animation-delay:1.2s}
+
 .peacock-corner{
   position:absolute;
   font-size:4rem;
-  z-index:0;
-  opacity:.3;
-  animation:featherFloat 6s ease-in-out infinite
+  z-index:2;
+  opacity:.4;
+  animation:featherFloat 6s ease-in-out infinite;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.2))
 }
 .peacock-corner.tl{top:40px;left:20px;transform:rotate(-30deg);animation-delay:0s}
 .peacock-corner.tr{top:40px;right:20px;transform:rotate(30deg) scaleX(-1);animation-delay:.5s}
-.peacock-corner.bl{bottom:100px;left:20px;font-size:2.5rem;opacity:.15;animation-delay:1s}
-.peacock-corner.br{bottom:100px;right:20px;font-size:2.5rem;opacity:.15;animation-delay:1.5s}
+.peacock-corner.bl{bottom:100px;left:20px;font-size:2.5rem;opacity:.2;animation-delay:1s}
+.peacock-corner.br{bottom:100px;right:20px;font-size:2.5rem;opacity:.2;animation-delay:1.5s}
 
 .decorative-accent{
   position:absolute;
-  width:150px;
-  height:150px;
+  width:200px;
+  height:200px;
   border-radius:50%;
-  background:radial-gradient(circle, rgba(77,184,212,.1) 0%, transparent 70%);
+  background:radial-gradient(circle, rgba(77,184,212,.15) 0%, transparent 70%);
   z-index:0
 }
-.accent-1{top:10%;left:5%;animation:pulse 6s ease-in-out infinite}
-.accent-2{bottom:15%;right:8%;animation:pulse 6s ease-in-out infinite;animation-delay:1s}
+.accent-1{top:8%;left:5%;animation:pulse 7s ease-in-out infinite}
+.accent-2{bottom:12%;right:8%;animation:pulse 7s ease-in-out infinite;animation-delay:1.5s}
+.accent-3{top:50%;left:2%;width:150px;height:150px;animation:pulse 8s ease-in-out infinite;animation-delay:2s}
+.accent-4{top:50%;right:2%;width:150px;height:150px;animation:pulse 8s ease-in-out infinite;animation-delay:2.5s}
 
 .badge{
   font-family:'Cinzel',serif;
-  font-size:.75rem;
-  letter-spacing:.5em;
-  color:var(--gold);
+  font-size:.8rem;
+  letter-spacing:.6em;
+  color:var(--light-gold);
   text-transform:uppercase;
   margin-bottom:20px;
   position:relative;
   z-index:2;
-  text-shadow:0 2px 8px rgba(0,0,0,.3)
+  text-shadow:0 2px 8px rgba(0,0,0,.3);
+  font-weight:600
 }
 
 .om{
-  font-size:4rem;
+  font-size:5rem;
   color:var(--gold);
   margin-bottom:20px;
   position:relative;
   z-index:2;
   animation:glow 3s ease-in-out infinite;
-  text-shadow:0 0 30px rgba(212,175,55,.5)
+  text-shadow:0 0 40px rgba(212,175,55,.6);
+  font-weight:900
 }
 
 .photo-wrap{
   position:relative;
   z-index:2;
   margin:32px auto 0;
-  width:220px;
-  height:220px;
+  width:240px;
+  height:240px;
 }
 
 .ring{
   position:absolute;
-  inset:-18px;
+  inset:-22px;
   border-radius:50%;
-  border:3px solid var(--gold);
-  animation:spin 25s linear infinite;
-  box-shadow:0 0 20px rgba(212,175,55,.4)
+  border:4px solid var(--gold);
+  animation:spin 30s linear infinite;
+  box-shadow:0 0 30px rgba(212,175,55,.5),inset 0 0 20px rgba(212,175,55,.2)
 }
 
 .ring::before{
   content:'🦚';
   position:absolute;
-  top:-18px;
+  top:-22px;
   left:50%;
   transform:translateX(-50%) rotate(-90deg);
-  font-size:1.5rem;
-  animation:spin 25s linear infinite reverse
+  font-size:1.8rem;
+  animation:spin 30s linear infinite reverse;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))
 }
 
 .ring::after{
-  content:'🪷';
+  content:'✨';
   position:absolute;
-  bottom:-18px;
+  bottom:-22px;
   left:50%;
   transform:translateX(-50%) rotate(90deg);
-  font-size:1.2rem;
-  animation:spin 25s linear infinite reverse
+  font-size:1.4rem;
+  animation:spin 30s linear infinite reverse
 }
 
 .photo-wrap img,.photo-placeholder{
-  width:220px;
-  height:220px;
+  width:240px;
+  height:240px;
   border-radius:50%;
   object-fit:cover;
-  border:4px solid var(--gold);
+  border:5px solid var(--gold);
   display:block;
-  box-shadow:0 8px 30px rgba(0,0,0,.4)
+  box-shadow:0 10px 40px rgba(0,0,0,.5);
+  position:relative;
+  z-index:1
 }
 
 .photo-placeholder{
@@ -173,52 +218,61 @@ body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg, v
   justify-content:center;
   gap:12px;
   cursor:pointer;
-  animation:shimmer 3s ease-in-out infinite
+  animation:shimmer 3s ease-in-out infinite;
+  transition:all .3s ease
 }
 
-.photo-placeholder span{font-size:3rem}
+.photo-placeholder:hover{
+  transform:scale(1.05);
+  box-shadow:0 12px 50px rgba(77,184,212,.4)
+}
+
+.photo-placeholder span{font-size:3.5rem;animation:bounce 2s ease-in-out infinite}
 
 .photo-placeholder p{
-  font-size:.7rem;
-  color:rgba(255,255,255,.8);
+  font-size:.75rem;
+  color:rgba(255,255,255,.9);
   text-align:center;
-  line-height:1.6;
+  line-height:1.7;
   font-family:'Cinzel',serif;
-  letter-spacing:.1em
+  letter-spacing:.15em;
+  font-weight:600
 }
 
 #photo-input{display:none}
 
 .names{
   font-family:'Dancing Script',cursive;
-  font-size:clamp(2.2rem,6vw,4.5rem);
+  font-size:clamp(2.4rem,6vw,5rem);
   font-weight:700;
-  background:linear-gradient(135deg, #fff 0%, rgba(255,255,255,.9) 100%);
+  background:linear-gradient(135deg, #fff 0%, rgba(255,255,255,.95) 100%);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
   line-height:1.1;
   position:relative;
   z-index:2;
-  text-shadow:0 2px 20px rgba(0,0,0,.3);
-  margin-top:28px;
-  letter-spacing:.02em
+  text-shadow:0 3px 25px rgba(0,0,0,.2);
+  margin-top:32px;
+  letter-spacing:.02em;
+  font-weight:800
 }
 
 .amp{
-  color:var(--gold);
+  color:var(--light-gold);
   font-style:italic;
-  font-size:.6em;
+  font-size:.65em;
   display:block;
-  margin:8px 0;
-  letter-spacing:.1em
+  margin:10px 0;
+  letter-spacing:.15em;
+  font-weight:700
 }
 
 .divider{
   display:flex;
   align-items:center;
   gap:16px;
-  margin:24px auto;
+  margin:28px auto;
   width:fit-content;
   position:relative;
   z-index:2;
@@ -226,7 +280,7 @@ body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg, v
 
 .divider::before,.divider::after{
   content:'';
-  width:100px;
+  width:120px;
   height:2px;
   background:linear-gradient(to right, transparent, var(--gold), transparent)
 }
@@ -234,37 +288,39 @@ body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg, v
 .divider::after{background:linear-gradient(to left, transparent, var(--gold), transparent)}
 
 .dot{
-  width:14px;
-  height:14px;
+  width:16px;
+  height:16px;
   border-radius:50%;
   background:var(--gold);
-  box-shadow:0 0 15px var(--gold);
-  animation:pulse 2s ease-in-out infinite
+  box-shadow:0 0 20px var(--gold),0 0 40px rgba(212,175,55,.4);
+  animation:glowPulse 3s ease-in-out infinite
 }
 
 .tagline{
-  font-size:clamp(1.05rem,2.5vw,1.4rem);
+  font-size:clamp(1.1rem,2.5vw,1.5rem);
   font-style:italic;
-  color:rgba(255,255,255,.9);
+  color:rgba(255,255,255,.95);
   position:relative;
   z-index:2;
-  text-shadow:0 2px 10px rgba(0,0,0,.3)
+  text-shadow:0 2px 12px rgba(0,0,0,.3);
+  font-weight:500
 }
 
 .date-badge{
-  background:rgba(212,175,55,.2);
-  border:2px solid var(--gold);
-  border-radius:50px;
-  padding:14px 36px;
+  background:rgba(212,175,55,.25);
+  border:3px solid var(--gold);
+  border-radius:60px;
+  padding:16px 44px;
   font-family:'Cinzel',serif;
-  font-size:.9rem;
-  color:var(--gold);
-  letter-spacing:.15em;
-  margin-top:20px;
+  font-size:1rem;
+  color:var(--light-gold);
+  letter-spacing:.2em;
+  margin-top:24px;
   position:relative;
   z-index:2;
-  box-shadow:0 0 20px rgba(212,175,55,.2);
-  font-weight:600
+  box-shadow:0 0 30px rgba(212,175,55,.3),inset 0 0 15px rgba(212,175,55,.1);
+  font-weight:700;
+  text-transform:uppercase
 }
 
 .scroll-hint{
@@ -277,32 +333,34 @@ body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg, v
   flex-direction:column;
   align-items:center;
   gap:10px;
-  opacity:.7;
+  opacity:.8;
   animation:bounce 2.5s ease-in-out infinite
 }
 
 .scroll-hint p{
-  font-size:.7rem;
-  letter-spacing:.3em;
+  font-size:.75rem;
+  letter-spacing:.4em;
   color:var(--gold);
   font-family:'Cinzel',serif;
-  font-weight:600
+  font-weight:700
 }
 
 .peacock-bar{
-  height:8px;
-  background:linear-gradient(to right, var(--peacock-dark), var(--gold), var(--peacock-teal), var(--peacock-cyan), var(--gold), var(--peacock-dark));
+  height:12px;
+  background:linear-gradient(to right, var(--peacock-dark), var(--peacock-purple), var(--gold), var(--peacock-cyan), var(--peacock-green), var(--gold), var(--peacock-purple), var(--peacock-dark));
   position:relative;
   z-index:1;
-  box-shadow:0 4px 15px rgba(77,184,212,.3)
+  box-shadow:0 6px 20px rgba(77,184,212,.4)
 }
 
 .cd-section{
   background:linear-gradient(135deg, var(--peacock-dark) 0%, var(--peacock-teal) 50%, var(--emerald) 100%);
-  padding:80px 24px;
+  padding:100px 24px;
   text-align:center;
   position:relative;
   z-index:1;
+  border-top:3px solid var(--gold);
+  border-bottom:3px solid var(--gold)
 }
 
 .cd-section::before{
@@ -312,266 +370,338 @@ body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg, v
   left:0;
   right:0;
   bottom:0;
-  background:radial-gradient(circle at 20% 80%, rgba(77,184,212,.1) 0%, transparent 50%),
-             radial-gradient(circle at 80% 20%, rgba(45,90,90,.1) 0%, transparent 50%);
+  background:radial-gradient(circle at 20% 80%, rgba(77,184,212,.12) 0%, transparent 50%),
+             radial-gradient(circle at 80% 20%, rgba(45,90,90,.12) 0%, transparent 50%);
   z-index:0
 }
 
 .cd-label{
   font-family:'Cinzel',serif;
-  font-size:.75rem;
-  letter-spacing:.6em;
-  color:rgba(212,175,55,.8);
+  font-size:.8rem;
+  letter-spacing:.7em;
+  color:rgba(212,175,55,.9);
   text-transform:uppercase;
   margin-bottom:16px;
   position:relative;
-  z-index:2
+  z-index:2;
+  font-weight:700
 }
 
 .cd-title{
   font-family:'Cinzel',serif;
-  font-size:clamp(1.6rem,4vw,2.3rem);
+  font-size:clamp(1.8rem,4vw,2.6rem);
   color:#fff;
   margin-bottom:12px;
   position:relative;
   z-index:2;
-  text-shadow:0 2px 10px rgba(0,0,0,.3)
+  text-shadow:0 2px 12px rgba(0,0,0,.4);
+  font-weight:800
 }
 
 .cd-grid{
   display:flex;
   justify-content:center;
-  gap:clamp(16px,4vw,36px);
+  gap:clamp(16px,4vw,40px);
   flex-wrap:wrap;
-  margin-top:44px;
+  margin-top:52px;
   position:relative;
   z-index:2
 }
 
 .cd-box{
-  background:rgba(255,255,255,.08);
-  border:2px solid rgba(212,175,55,.4);
-  border-radius:20px;
-  padding:32px 24px;
-  min-width:100px;
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.09);
+  border:3px solid rgba(212,175,55,.5);
+  border-radius:25px;
+  padding:36px 28px;
+  min-width:110px;
+  backdrop-filter:blur(15px);
   transition:all .4s cubic-bezier(.25,.46,.45,.94);
-  box-shadow:0 8px 32px rgba(0,0,0,.2)
+  box-shadow:0 10px 40px rgba(0,0,0,.3),inset 0 1px 1px rgba(255,255,255,.1);
+  position:relative
+}
+
+.cd-box::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:25px;
+  background:radial-gradient(circle at top left, rgba(212,175,55,.1), transparent);
+  pointer-events:none
 }
 
 .cd-box:hover{
-  transform:translateY(-8px) scale(1.05);
-  background:rgba(255,255,255,.12);
-  box-shadow:0 12px 48px rgba(77,184,212,.3);
-  border-color:rgba(77,184,212,.6)
+  transform:translateY(-12px) scale(1.08);
+  background:rgba(255,255,255,.14);
+  box-shadow:0 14px 60px rgba(77,184,212,.4),inset 0 1px 1px rgba(255,255,255,.2);
+  border-color:rgba(77,184,212,.7)
 }
 
 .cd-num{
   font-family:'Cinzel',serif;
-  font-size:clamp(2.2rem,6vw,3.6rem);
-  font-weight:700;
-  color:var(--gold);
+  font-size:clamp(2.4rem,6vw,4rem);
+  font-weight:900;
+  color:var(--light-gold);
   line-height:1;
-  text-shadow:0 0 25px rgba(212,175,55,.6)
+  text-shadow:0 0 30px rgba(212,175,55,.7);
+  position:relative;
+  z-index:1
 }
 
 .cd-lbl{
-  font-size:.7rem;
-  letter-spacing:.4em;
-  color:rgba(255,255,255,.7);
+  font-size:.75rem;
+  letter-spacing:.5em;
+  color:rgba(255,255,255,.8);
   font-family:'Cinzel',serif;
-  margin-top:12px;
+  margin-top:14px;
   text-transform:uppercase;
-  font-weight:600
+  font-weight:700
 }
 
 section{
   position:relative;
   z-index:1;
-  max-width:920px;
+  max-width:1000px;
   margin:0 auto;
-  padding:80px 24px
+  padding:100px 24px
 }
 
 .sec-label{
   text-align:center;
   font-family:'Cinzel',serif;
-  font-size:.75rem;
-  letter-spacing:.6em;
+  font-size:.8rem;
+  letter-spacing:.7em;
   color:var(--peacock-teal);
   text-transform:uppercase;
   margin-bottom:16px;
-  font-weight:600
+  font-weight:700
 }
 
 .sec-title{
   text-align:center;
   font-family:'Cinzel',serif;
-  font-size:clamp(1.6rem,4vw,2.4rem);
-  font-weight:700;
+  font-size:clamp(1.8rem,4vw,2.8rem);
+  font-weight:800;
   color:var(--peacock-dark);
   margin-bottom:12px;
-  text-shadow:0 1px 3px rgba(0,0,0,.1)
+  text-shadow:0 2px 4px rgba(0,0,0,.08)
 }
 
 .sec-orn{
   text-align:center;
-  font-size:1.8rem;
-  margin-bottom:40px;
-  letter-spacing:.3em;
-  animation:peacockTail 4s ease-in-out infinite
+  font-size:2rem;
+  margin-bottom:48px;
+  letter-spacing:.4em;
+  animation:peacockTail 4s ease-in-out infinite;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))
 }
 
 .orn-div{
   display:flex;
   align-items:center;
   gap:16px;
-  margin:50px auto;
-  max-width:500px;
+  margin:60px auto;
+  max-width:600px;
   justify-content:center;
 }
 
 .orn-div::before,.orn-div::after{
   content:'';
   flex:1;
-  height:2px;
+  height:3px;
   background:linear-gradient(to right, transparent, var(--peacock-teal), transparent)
 }
 
 .orn-div span{
   color:var(--peacock-teal);
-  font-size:1.6rem;
-  animation:shimmer 3s ease-in-out infinite
+  font-size:2rem;
+  animation:shimmer 3s ease-in-out infinite;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))
 }
 
 .details-section{
-  background:linear-gradient(135deg, var(--dark-cream) 0%, #faf4e6 100%)
+  background:linear-gradient(135deg, var(--dark-cream) 0%, #faf4e6 100%);
+  border-top:3px solid var(--peacock-teal);
+  border-bottom:3px solid var(--peacock-teal)
 }
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
-  margin-top:16px
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:32px;
+  margin-top:20px
 }
 
 .card{
   background:linear-gradient(135deg, #fff 0%, #faf8f3 100%);
-  border-radius:24px;
-  padding:36px 28px;
+  border-radius:28px;
+  padding:44px 32px;
   text-align:center;
-  border:2px solid rgba(77,184,212,.15);
-  box-shadow:0 8px 32px rgba(0,0,0,.08);
-  transition:all .4s cubic-bezier(.25,.46,.45,.94)
+  border:3px solid rgba(77,184,212,.2);
+  box-shadow:0 10px 40px rgba(0,0,0,.1),inset 0 1px 1px rgba(255,255,255,.5);
+  transition:all .4s cubic-bezier(.25,.46,.45,.94);
+  position:relative;
+  overflow:hidden
+}
+
+.card::before{
+  content:'';
+  position:absolute;
+  top:-50%;
+  right:-50%;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle, rgba(77,184,212,.1), transparent);
+  border-radius:50%;
+  opacity:0;
+  transition:opacity .4s ease
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 16px 48px rgba(77,184,212,.15);
-  border-color:rgba(77,184,212,.4);
+  transform:translateY(-12px);
+  box-shadow:0 20px 60px rgba(77,184,212,.2),inset 0 1px 2px rgba(255,255,255,.6);
+  border-color:rgba(77,184,212,.5);
   background:linear-gradient(135deg, #fff 0%, #f8f4ed 100%)
 }
 
+.card:hover::before{opacity:1}
+
 .card-icon{
-  width:70px;
-  height:70px;
+  width:80px;
+  height:80px;
   border-radius:50%;
   background:linear-gradient(135deg, var(--peacock-teal), var(--peacock-cyan));
   display:flex;
   align-items:center;
   justify-content:center;
-  margin:0 auto 20px;
-  font-size:2rem;
-  box-shadow:0 8px 24px rgba(77,184,212,.25)
+  margin:0 auto 24px;
+  font-size:2.4rem;
+  box-shadow:0 10px 30px rgba(77,184,212,.3),inset 0 1px 1px rgba(255,255,255,.2);
+  position:relative;
+  z-index:1;
+  border:2px solid rgba(255,255,255,.3)
 }
 
 .card h3{
   font-family:'Cinzel',serif;
-  font-size:.8rem;
-  letter-spacing:.4em;
+  font-size:.85rem;
+  letter-spacing:.5em;
   color:var(--peacock-teal);
   text-transform:uppercase;
   margin-bottom:14px;
-  font-weight:700
+  font-weight:800;
+  position:relative;
+  z-index:1
 }
 
 .card p{
-  font-size:1.1rem;
-  color:var(--mid);
-  line-height:1.8
-}
-
-.card .hl{
-  font-size:1.4rem;
-  font-weight:700;
-  color:var(--peacock-dark);
-  margin:8px 0
-}
-
-.rsvp-section{text-align:center}
-
-.rsvp-card{
-  background:linear-gradient(135deg, #fff 0%, #faf8f3 100%);
-  border:2px solid rgba(212,175,55,.3);
-  border-radius:28px;
-  padding:52px 40px;
-  box-shadow:0 12px 48px rgba(0,0,0,.1);
-  max-width:520px;
-  margin:0 auto;
-  transition:all .4s ease
-}
-
-.rsvp-card:hover{
-  box-shadow:0 16px 64px rgba(212,175,55,.15);
-  border-color:rgba(212,175,55,.5)
-}
-
-.rsvp-card p{
   font-size:1.15rem;
   color:var(--mid);
   line-height:1.9;
-  margin-bottom:32px;
-  font-style:italic
+  position:relative;
+  z-index:1
+}
+
+.card .hl{
+  font-size:1.6rem;
+  font-weight:800;
+  color:var(--peacock-dark);
+  margin:12px 0;
+  text-shadow:0 2px 4px rgba(0,0,0,.08)
+}
+
+.rsvp-section{text-align:center;background:linear-gradient(135deg, #fdf8ef 0%, #f9f3e8 100%);border-top:3px dashed var(--gold)}
+
+.rsvp-card{
+  background:linear-gradient(135deg, #fff 0%, #faf8f3 100%);
+  border:4px solid var(--gold);
+  border-radius:32px;
+  padding:60px 48px;
+  box-shadow:0 15px 60px rgba(0,0,0,.12),inset 0 1px 1px rgba(255,255,255,.6);
+  max-width:580px;
+  margin:0 auto;
+  transition:all .4s ease;
+  position:relative;
+  overflow:hidden
+}
+
+.rsvp-card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:radial-gradient(circle at 20% 50%, rgba(77,184,212,.05), transparent);
+  pointer-events:none
+}
+
+.rsvp-card:hover{
+  box-shadow:0 20px 80px rgba(212,175,55,.2),inset 0 1px 2px rgba(255,255,255,.7);
+  border-color:var(--light-gold);
+  transform:translateY(-4px)
+}
+
+.rsvp-card p{
+  font-size:1.25rem;
+  color:var(--mid);
+  line-height:2;
+  margin-bottom:36px;
+  font-style:italic;
+  position:relative;
+  z-index:1
 }
 
 .rsvp-btn{
   display:inline-flex;
   align-items:center;
-  gap:12px;
+  gap:14px;
   background:linear-gradient(135deg, var(--peacock-teal), var(--peacock-cyan));
   color:#fff;
   text-decoration:none;
-  padding:16px 40px;
-  border-radius:50px;
+  padding:18px 48px;
+  border-radius:60px;
   font-family:'Cinzel',serif;
-  font-size:.95rem;
-  letter-spacing:.1em;
-  font-weight:600;
+  font-size:1rem;
+  letter-spacing:.12em;
+  font-weight:700;
   transition:all .4s ease;
-  box-shadow:0 8px 24px rgba(77,184,212,.3);
+  box-shadow:0 10px 32px rgba(77,184,212,.35);
   cursor:pointer;
-  border:none
+  border:none;
+  min-height:56px;
+  min-width:56px;
+  text-transform:uppercase;
+  position:relative;
+  z-index:1
 }
 
 .rsvp-btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 40px rgba(77,184,212,.5);
+  transform:translateY(-6px);
+  box-shadow:0 16px 50px rgba(77,184,212,.6);
   background:linear-gradient(135deg, var(--peacock-cyan), #5dd4e0)
 }
 
+.rsvp-btn:active{
+  transform:translateY(-2px)
+}
+
 .rsvp-note{
-  margin-top:20px;
-  font-size:.9rem;
+  margin-top:24px;
+  font-size:.95rem;
   color:#999;
-  font-style:italic
+  font-style:italic;
+  position:relative;
+  z-index:1;
+  font-weight:500
 }
 
 footer{
   background:linear-gradient(135deg, var(--peacock-dark) 0%, var(--peacock-teal) 100%);
   text-align:center;
-  padding:60px 24px;
+  padding:80px 24px;
   position:relative;
-  z-index:1
+  z-index:1;
+  border-top:3px solid var(--gold)
 }
 
 footer::before{
@@ -581,25 +711,37 @@ footer::before{
   left:0;
   right:0;
   bottom:0;
-  background:radial-gradient(circle at 50% 0%, rgba(77,184,212,.1) 0%, transparent 70%);
+  background:radial-gradient(circle at 50% 0%, rgba(77,184,212,.12) 0%, transparent 70%);
   z-index:0
 }
 
 .foot-names{
   font-family:'Dancing Script',cursive;
-  font-size:1.8rem;
-  color:var(--gold);
-  margin-bottom:12px;
+  font-size:2.2rem;
+  color:var(--light-gold);
+  margin-bottom:16px;
   position:relative;
   z-index:1;
-  font-weight:700
+  font-weight:700;
+  text-shadow:0 2px 8px rgba(0,0,0,.3)
+}
+
+.foot-date{
+  color:var(--gold);
+  font-size:1.3rem;
+  margin:16px 0;
+  font-weight:700;
+  letter-spacing:.2em;
+  position:relative;
+  z-index:1
 }
 
 footer p{
-  color:rgba(255,255,255,.6);
-  font-size:.95rem;
+  color:rgba(255,255,255,.7);
+  font-size:1rem;
   position:relative;
-  z-index:1
+  z-index:1;
+  line-height:1.8
 }
 
 .petal{
@@ -607,23 +749,42 @@ footer p{
   pointer-events:none;
   animation:fall linear infinite;
   z-index:0;
-  opacity:.5;
-  filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))
+  opacity:.4;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.15))
 }
 
 @media(max-width:768px){
-  .cd-box{min-width:80px;padding:20px 14px}
-  .rsvp-card{padding:36px 24px}
-  section{padding:60px 20px}
-  .names{margin-top:20px}
+  section{padding:70px 20px}
+  .cd-box{min-width:90px;padding:24px 18px;border:2px solid rgba(212,175,55,.4)}
+  .cd-num{font-size:2.2rem}
+  .rsvp-card{padding:40px 28px}
+  .card{padding:32px 24px}
+  .cards{gap:24px}
+  .om{font-size:3.5rem}
+  .names{margin-top:24px}
 }
 
 @media(max-width:480px){
-  .cd-box{min-width:70px;padding:16px 10px}
+  section{padding:50px 16px}
+  .cd-box{min-width:80px;padding:16px 12px;border:2px solid rgba(212,175,55,.3)}
   .cd-num{font-size:1.8rem}
-  .rsvp-card{padding:28px 16px}
+  .cd-lbl{font-size:.7rem;letter-spacing:.3em}
+  .rsvp-card{padding:28px 20px;border:3px solid var(--gold)}
+  .rsvp-btn{padding:14px 32px;font-size:.9rem}
   .cards{gap:16px}
   .card{padding:24px 16px}
+  .om{font-size:3rem}
+  .names{font-size:2rem;margin-top:16px}
+  .peacock-bar{height:8px}
+}
+
+@media(prefers-color-scheme:dark){
+  :root{
+    --cream:#1a1a1a;
+    --dark-cream:#2a2a2a;
+    --text:#e0d4c4
+  }
+  body{background:linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)}
 }
 </style>
 </head>
@@ -632,31 +793,47 @@ footer p{
 
 <div class="decorative-accent accent-1"></div>
 <div class="decorative-accent accent-2"></div>
+<div class="decorative-accent accent-3"></div>
+<div class="decorative-accent accent-4"></div>
 
 <section class="hero">
+  <div class="peacock-feathers">
+    <div class="feather feather-1">🦚</div>
+    <div class="feather feather-2">🦚</div>
+    <div class="feather feather-3">🪷</div>
+    <div class="feather feather-4">🪷</div>
+    <div class="feather feather-5">✨</div>
+    <div class="feather feather-6">✨</div>
+  </div>
+  
   <div class="peacock-corner tl">🦚</div>
   <div class="peacock-corner tr">🦚</div>
   <div class="peacock-corner bl">🪷</div>
   <div class="peacock-corner br">🪷</div>
+  
   <p class="badge">🌸 With Divine Blessings of Lord Krishna 🌸</p>
   <div class="om">ॐ</div>
+  
   <div class="photo-wrap">
     <div class="ring"></div>
-    <div class="photo-placeholder" id="pp" onclick="document.getElementById('photo-input').click()">
-      <span>📷</span><p>TAP TO ADD<br/>COUPLE PHOTO</p>
+    <div class="photo-placeholder" id="pp" onclick="document.getElementById('photo-input').click()" role="button" tabindex="0" aria-label="Click to add couple photo">
+      <span>📷</span>
+      <p>TAP TO ADD<br/>COUPLE PHOTO</p>
     </div>
     <img id="couple-img" src="IMG20260426193321.jpg" alt="Muthumaari & Sambathraj" style="display:block"/>
     <input type="file" id="photo-input" accept="image/*" onchange="loadPhoto(event)"/>
   </div>
-  <div style="height:28px"></div>
+  
+  <div style="height:32px"></div>
   <p class="badge">💍 Engagement Invitation 💍</p>
   <h1 class="names">Muthumaari<span class="amp">&amp;</span>Sambathraj</h1>
   <div class="divider"><div class="dot"></div></div>
   <p class="tagline">"Where there is love, there is Krishna's blessing"</p>
-  <div class="date-badge">29 MAY 2026 &nbsp;|&nbsp; 9:30 AM</div>
-  <div class="scroll-hint">
+  <div class="date-badge">29 MAY 2026 · 9:30 AM</div>
+  
+  <div class="scroll-hint" aria-label="Scroll down to see more">
     <p>SCROLL</p>
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
   </div>
 </section>
 
@@ -665,7 +842,7 @@ footer p{
 <div class="cd-section">
   <p class="cd-label">Time Until The Celebration</p>
   <h2 class="cd-title">Counting Down The Days</h2>
-  <div style="font-size:1.8rem;color:var(--gold);margin-top:8px;letter-spacing:.4em;animation:shimmer 3s ease-in-out infinite">🦚 🪷 🦚</div>
+  <div style="font-size:2rem;color:var(--gold);margin-top:12px;letter-spacing:.5em;animation:shimmer 3s ease-in-out infinite">🦚 🪷 🦚</div>
   <div class="cd-grid">
     <div class="cd-box"><div class="cd-num" id="cd-days">--</div><div class="cd-lbl">DAYS</div></div>
     <div class="cd-box"><div class="cd-num" id="cd-hours">--</div><div class="cd-lbl">HOURS</div></div>
@@ -679,39 +856,55 @@ footer p{
 <section class="details-section">
   <p class="sec-label">Event Information</p>
   <h2 class="sec-title">Engagement Ceremony</h2>
-  <div class="sec-orn">🦚 ꧁ ꧂ 🦚</div>
+  <div class="sec-orn">🦚 ꧁ 💫 ꧂ 🦚</div>
   <div class="cards">
-    <div class="card"><div class="card-icon">📅</div><h3>Date</h3><p class="hl">Thursday</p><p>29th May, 2026</p></div>
-    <div class="card"><div class="card-icon">⏰</div><h3>Time</h3><p class="hl">9:30 AM</p><p>to 10:30 PM</p><p style="font-size:.9rem;color:#aaa;margin-top:8px;font-style:italic">Auspicious muhurat selected</p></div>
-    <div class="card"><div class="card-icon">📍</div><h3>Venue</h3><p class="hl">Navneetha Krishna Kovil Mahal</p><p>Sengottai</p></div>
+    <div class="card">
+      <div class="card-icon">📅</div>
+      <h3>Date</h3>
+      <p class="hl">Thursday</p>
+      <p>29th May, 2026</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⏰</div>
+      <h3>Time</h3>
+      <p class="hl">9:30 AM</p>
+      <p>to 10:30 PM</p>
+      <p style="font-size:.9rem;color:#bbb;margin-top:10px;font-style:italic">Auspicious Muhurat</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📍</div>
+      <h3>Venue</h3>
+      <p class="hl">Navneetha Krishna Kovil Mahal</p>
+      <p>Sengottai</p>
+    </div>
   </div>
 </section>
 
 <div class="orn-div"><span>🌸</span></div>
 
-<section style="text-align:center;padding-top:0">
+<section style="text-align:center;padding-top:60px">
   <p class="sec-label">A Sacred Moment</p>
   <h2 class="sec-title">Join Us In Celebration</h2>
-  <div class="sec-orn">🪷</div>
-  <div style="max-width:640px;margin:0 auto">
-    <p style="font-size:1.2rem;line-height:2.2;color:var(--mid);font-style:italic">
+  <div class="sec-orn">🪷 ✨ 🪷</div>
+  <div style="max-width:700px;margin:0 auto">
+    <p style="font-size:1.3rem;line-height:2.4;color:var(--mid);font-style:italic;font-weight:500">
       With the grace of Lord Krishna and the blessings of our families, we joyfully announce the engagement of
-      <strong style="color:var(--peacock-dark);font-style:normal;font-weight:700">Muthumaari</strong> and
-      <strong style="color:var(--peacock-dark);font-style:normal;font-weight:700">Sampath Raj</strong>.<br/><br/>
+      <strong style="color:var(--peacock-dark);font-style:normal;font-weight:800">Muthumaari</strong> and
+      <strong style="color:var(--peacock-dark);font-style:normal;font-weight:800">Sampath Raj</strong>.<br/><br/>
       We humbly request your presence and blessings to make this sacred occasion truly memorable.
     </p>
   </div>
-  <div style="font-size:2.8rem;margin:36px 0;letter-spacing:12px;animation:shimmer 3s ease-in-out infinite">🦚🪷💛🪷🦚</div>
+  <div style="font-size:3.2rem;margin:48px 0;letter-spacing:14px;animation:shimmer 3s ease-in-out infinite;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))">🦚🪷💛🪷🦚</div>
 </section>
 
-<section class="rsvp-section" style="padding-top:0">
+<section class="rsvp-section" style="padding-top:60px">
   <p class="sec-label">Be There</p>
-  <h2 class="sec-title">For more details, reach out to me via below whatsapp link</h2>
-  <div class="sec-orn">💍</div>
+  <h2 class="sec-title">For More Details, Reach Out Via WhatsApp</h2>
+  <div class="sec-orn">💍 ✨ 💍</div>
   <div class="rsvp-card">
-    <p>Your blessings mean the world to us.<br/></p>
-    <a class="rsvp-btn" href="https://wa.me/919688849589." target="_blank">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.199-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.918-2.206-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.71.227 1.355.195 1.867.118.57-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.452 0-2.83.521-3.848 1.533-1.007 1.012-1.562 2.35-1.562 3.833 0 3.064 2.525 5.547 5.471 5.547h.004c1.452 0 2.83-.521 3.848-1.533 1.007-1.012 1.563-2.35 1.563-3.833 0-3.064-2.525-5.547-5.471-5.547M20.52 3.449C18.897 1.845 16.736 1 14.493 1 7.467 1 1.635 6.876 1.635 13.972c0 2.054.505 4.069 1.470 5.848L1.514 23l6.375-2.041c1.691.921 3.638 1.41 5.604 1.41 7.026 0 12.857-5.875 12.857-13.972 0-3.723-1.469-7.268-4.125-9.958"/></svg>
+    <p>Your blessings and presence mean the world to us.</p>
+    <a class="rsvp-btn" href="https://wa.me/919688849589" target="_blank" rel="noopener noreferrer" aria-label="Send RSVP via WhatsApp">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.05-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.297-.495.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.71.227 1.355.195 1.864.118.568-.085 1.758-.718 2.006-1.413.248-.695.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.105 0-2.185.221-3.227.645l-.231.12-.239-.041C6.04 7.238 5.282 6.938 4.583 6.938 2.604 6.938 1 8.542 1 10.52c0 1.696.809 3.289 2.216 4.372l.167.127.156.25c1.296 2.113 3.745 3.726 6.514 3.726 3.848 0 6.97-3.122 6.97-6.97 0-3.847-3.122-6.97-6.97-6.97"/></svg>
       RSVP via WhatsApp
     </a>
     <p class="rsvp-note">Welcome 💚🌍💙</p>
@@ -722,35 +915,63 @@ footer p{
 
 <footer>
   <p class="foot-names">Muthumaari 💙💚 Sambathraj</p>
-  <p style="color:var(--gold);font-size:1.1rem;margin:12px 0;font-weight:600">29 · 05 · 2026</p>
-  <p style="margin-top:8px">Navneetha Krishna Kovil Mahal, Sengottai</p>
-  <div style="margin-top:20px;font-size:1.8rem;letter-spacing:10px;opacity:.4;animation:shimmer 3s ease-in-out infinite">🦚 ॐ 🦚</div>
+  <p class="foot-date">29 · 05 · 2026</p>
+  <p>Navneetha Krishna Kovil Mahal, Sengottai</p>
+  <div style="margin-top:24px;font-size:2rem;letter-spacing:12px;opacity:.5;animation:shimmer 3s ease-in-out infinite;filter:drop-shadow(0 2px 4px rgba(0,0,0,.2))">🦚 ॐ 🦚</div>
 </footer>
 
 <script>
 function updateCountdown(){
-  const t=new Date('2026-05-29T09:30:00'),n=new Date(),d=t-n;
-  if(d<=0){['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id=>document.getElementById(id).textContent='0');return}
-  document.getElementById('cd-days').textContent=String(Math.floor(d/86400000)).padStart(2,'0');
-  document.getElementById('cd-hours').textContent=String(Math.floor((d%86400000)/3600000)).padStart(2,'0');
-  document.getElementById('cd-mins').textContent=String(Math.floor((d%3600000)/60000)).padStart(2,'0');
-  document.getElementById('cd-secs').textContent=String(Math.floor((d%60000)/1000)).padStart(2,'0');
+  const targetDate=new Date('2026-05-29T09:30:00').getTime(),now=new Date().getTime(),diff=targetDate-now;
+  if(diff<=0){['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id=>document.getElementById(id).textContent='00');return}
+  document.getElementById('cd-days').textContent=String(Math.floor(diff/86400000)).padStart(2,'0');
+  document.getElementById('cd-hours').textContent=String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');
+  document.getElementById('cd-mins').textContent=String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+  document.getElementById('cd-secs').textContent=String(Math.floor((diff%60000)/1000)).padStart(2,'0');
 }
-updateCountdown();setInterval(updateCountdown,1000);
+updateCountdown();
+setInterval(updateCountdown,1000);
 
 function loadPhoto(e){
-  const f=e.target.files[0];if(!f)return;
-  const r=new FileReader();
-  r.onload=ev=>{const i=document.getElementById('couple-img');i.src=ev.target.result;i.style.display='block';document.getElementById('pp').style.display='none'};
-  r.readAsDataURL(f);
+  const file=e.target.files[0];
+  if(!file||file.size>5*1024*1024){
+    alert('Please upload an image file less than 5MB');
+    return;
+  }
+  if(!file.type.startsWith('image/')){
+    alert('Please upload a valid image file');
+    return;
+  }
+  const reader=new FileReader();
+  reader.onload=(ev)=>{
+    const img=document.getElementById('couple-img');
+    const canvas=document.createElement('canvas');
+    const ctx=canvas.getContext('2d');
+    const image=new Image();
+    image.onload=()=>{
+      canvas.width=240;canvas.height=240;
+      ctx.drawImage(image,0,0,240,240);
+      img.src=canvas.toDataURL('image/jpeg',0.9);
+      img.style.display='block';
+      document.getElementById('pp').style.display='none';
+    };
+    image.src=ev.target.result;
+  };
+  reader.readAsDataURL(file);
 }
 
-const em=['🌸','🪷','🌺','✨','💛'],c=document.getElementById('petals');
-for(let i=0;i<18;i++){
-  const p=document.createElement('div');p.className='petal';
-  p.textContent=em[Math.floor(Math.random()*em.length)];
-  p.style.cssText='left:'+Math.random()*100+'vw;font-size:'+(0.9+Math.random()*1)+'rem;animation-duration:'+(10+Math.random()*14)+'s;animation-delay:'+(Math.random()*12)+'s';
-  c.appendChild(p);
+document.getElementById('photo-input').addEventListener('change',loadPhoto);
+document.getElementById('pp').addEventListener('keypress',(e)=>{
+  if(e.key==='Enter'||e.key===' '){document.getElementById('photo-input').click()}
+});
+
+const emojis=['🌸','🪷','🌺','✨','💛','🦚'],petalsContainer=document.getElementById('petals');
+for(let i=0;i<22;i++){
+  const petal=document.createElement('div');
+  petal.className='petal';
+  petal.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+  petal.style.cssText=`left:${Math.random()*100}vw;font-size:${0.8+Math.random()*1.2}rem;animation-duration:${12+Math.random()*16}s;animation-delay:${Math.random()*14}s`;
+  petalsContainer.appendChild(petal);
 }
 </script>
 </body>
