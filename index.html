@@ -3,224 +3,478 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Join us for the engagement ceremony of Muthumaari and Sambathraj on May 29, 2026 at Navneetha Krishna Kovil Mahal, Sengottai"/>
+<meta name="theme-color" content="#0a3a3a"/>
+<meta property="og:title" content="Muthumaari & Sambathraj Engagement"/>
+<meta property="og:description" content="With divine blessings, we invite you to celebrate our engagement"/>
+<meta property="og:type" content="website"/>
 <title>Muthumaari & Sambathraj - Engagement Invitation</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
-:root {
-  --peacock-dark: #062c2c;
-  --peacock-teal: #0d5f5f;
-  --gold: #d4af37;
-  --light-gold: #f3e5ab;
-  --glass: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(212, 175, 55, 0.3);
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --peacock-dark:#0a3a3a;
+  --peacock-teal:#0d5f5f;
+  --peacock-cyan:#4db8d4;
+  --peacock-blue:#1e90ff;
+  --peacock-green:#1a8080;
+  --peacock-purple:#6b4c9a;
+  --gold:#d4af37;
+  --light-gold:#e8c547;
+  --cream:#fdf8ef;
+  --dark-cream:#f5ead6;
+  --text:#2c1a0e;
+  --mid:#5a3e28;
+  --emerald:#2d5a5a;
+  --peacock-light:#7dd3c0
+}
+html{scroll-behavior:smooth}
+body{font-family:'Cormorant Garamond',serif;background:linear-gradient(135deg, var(--cream) 0%, #f9f3e8 100%);color:var(--text);overflow-x:hidden}
+
+@keyframes pulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.5}50%{transform:translate(-50%,-50%) scale(1.05);opacity:1}}
+@keyframes glow{0%,100%{text-shadow:0 0 20px rgba(212,175,55,.4)}50%{text-shadow:0 0 50px rgba(212,175,55,.9)}}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+@keyframes fall{0%{transform:translateY(-20px) rotate(0deg);opacity:.7}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+@keyframes shimmer{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes peacockTail{0%{transform:scaleX(1) scaleY(1)}50%{transform:scaleX(1.05) scaleY(1.02)}100%{transform:scaleX(1) scaleY(1)}}
+@keyframes featherFloat{0%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-10px) rotate(5deg)}100%{transform:translateY(0) rotate(-5deg)}}
+@keyframes featherWave{0%{transform:translateX(0) rotate(0deg)}50%{transform:translateX(8px) rotate(-3deg)}100%{transform:translateX(0) rotate(0deg)}}
+@keyframes peacockBreathe{0%,100%{transform:scale(1);box-shadow:0 0 40px rgba(212,175,55,.3)}50%{transform:scale(1.02);box-shadow:0 0 60px rgba(77,184,212,.4)}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(77,184,212,.3),inset 0 0 20px rgba(77,184,212,.1)}50%{box-shadow:0 0 40px rgba(77,184,212,.6),inset 0 0 30px rgba(77,184,212,.2)}}
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:60px 24px;
+  overflow:hidden;
+  background:linear-gradient(135deg, var(--peacock-dark) 0%, #0d4040 50%, #0a3a3a 100%);
+  border-bottom:3px solid var(--gold);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { 
-  font-family: 'Cormorant Garamond', serif; 
-  background-color: var(--peacock-dark); 
-  color: #fff; 
-  overflow-x: hidden;
+.hero::before{
+  content:'';
+  position:absolute;
+  width:1000px;
+  height:1000px;
+  border-radius:50%;
+  border:3px solid rgba(212,175,55,.15);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  animation:peacockBreathe 6s ease-in-out infinite;
+  box-shadow:0 0 50px rgba(77,184,212,.1)
 }
 
-/* Enhanced Background */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
-  background: radial-gradient(circle at center, #0d5f5f 0%, #062c2c 100%);
-  overflow: hidden;
+.peacock-feathers{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:0
 }
 
-/* Floating Feather/Petal Styles */
-.falling-element {
+.feather{
+  position:absolute;
+  font-size:3rem;
+  opacity:.15;
+  animation:featherWave 4s ease-in-out infinite;
+}
+
+.feather-1{top:5%;left:8%;animation-delay:0s}
+.feather-2{top:15%;right:10%;transform:scaleX(-1);animation-delay:.5s}
+.feather-3{bottom:20%;left:5%;font-size:2.5rem;animation-delay:1s}
+.feather-4{bottom:15%;right:8%;font-size:2.5rem;transform:scaleX(-1);animation-delay:1.5s}
+
+.peacock-corner{
+  position:absolute;
+  font-size:4rem;
+  z-index:2;
+  opacity:.4;
+  animation:featherFloat 6s ease-in-out infinite;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.2))
+}
+.peacock-corner.tl{top:40px;left:20px;transform:rotate(-30deg)}
+.peacock-corner.tr{top:40px;right:20px;transform:rotate(30deg) scaleX(-1)}
+
+.badge{
+  font-family:'Cinzel',serif;
+  font-size:.8rem;
+  letter-spacing:.6em;
+  color:var(--light-gold);
+  text-transform:uppercase;
+  margin-bottom:20px;
+  position:relative;
+  z-index:2;
+  text-shadow:0 2px 8px rgba(0,0,0,.3);
+  font-weight:600
+}
+
+.om{
+  font-size:5rem;
+  color:var(--gold);
+  margin-bottom:20px;
+  position:relative;
+  z-index:2;
+  animation:glow 3s ease-in-out infinite;
+  text-shadow:0 0 40px rgba(212,175,55,.6);
+  font-weight:900
+}
+
+.photo-wrap{
+  position:relative;
+  z-index:2;
+  margin:32px auto 0;
+  width:240px;
+  height:240px;
+}
+
+.ring{
+  position:absolute;
+  inset:-22px;
+  border-radius:50%;
+  border:4px solid var(--gold);
+  animation:spin 30s linear infinite;
+  box-shadow:0 0 30px rgba(212,175,55,.5),inset 0 0 20px rgba(212,175,55,.2)
+}
+
+.ring::before{
+  content:'🦚';
+  position:absolute;
+  top:-22px;
+  left:50%;
+  transform:translateX(-50%) rotate(-90deg);
+  font-size:1.8rem;
+  animation:spin 30s linear infinite reverse;
+}
+
+.photo-wrap img{
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid var(--gold);
+  display:block;
+  box-shadow:0 10px 40px rgba(0,0,0,.5);
+  position:relative;
+  z-index:1
+}
+
+.names{
+  font-family:'Dancing Script',cursive;
+  font-size:clamp(2.4rem,6vw,5rem);
+  font-weight:700;
+  background:linear-gradient(135deg, #fff 0%, rgba(255,255,255,.95) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  line-height:1.1;
+  position:relative;
+  z-index:2;
+  text-shadow:0 3px 25px rgba(0,0,0,.2);
+  margin-top:32px;
+  letter-spacing:.02em;
+  font-weight:800
+}
+
+.amp{
+  color:var(--light-gold);
+  font-style:italic;
+  font-size:.65em;
+  display:block;
+  margin:10px 0;
+  letter-spacing:.15em;
+  font-weight:700
+}
+
+.divider{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin:28px auto;
+  width:fit-content;
+  position:relative;
+  z-index:2;
+}
+
+.divider::before,.divider::after{
+  content:'';
+  width:120px;
+  height:2px;
+  background:linear-gradient(to right, transparent, var(--gold), transparent)
+}
+
+.dot{
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 20px var(--gold),0 0 40px rgba(212,175,55,.4);
+  animation:glowPulse 3s ease-in-out infinite
+}
+
+.date-badge{
+  background:rgba(212,175,55,.25);
+  border:3px solid var(--gold);
+  border-radius:60px;
+  padding:16px 44px;
+  font-family:'Cinzel',serif;
+  font-size:1rem;
+  color:var(--light-gold);
+  letter-spacing:.2em;
+  margin-top:24px;
+  position:relative;
+  z-index:2;
+  box-shadow:0 0 30px rgba(212,175,55,.3),inset 0 0 15px rgba(212,175,55,.1);
+  font-weight:700;
+  text-transform:uppercase
+}
+
+.cd-section{
+  background:linear-gradient(135deg, var(--peacock-dark) 0%, var(--peacock-teal) 50%, var(--emerald) 100%);
+  padding:100px 24px;
+  text-align:center;
+  position:relative;
+  z-index:1;
+  border-top:3px solid var(--gold);
+  border-bottom:3px solid var(--gold)
+}
+
+.cd-grid{
+  display:flex;
+  justify-content:center;
+  gap:clamp(16px,4vw,40px);
+  flex-wrap:wrap;
+  margin-top:52px;
+}
+
+.cd-box{
+  background:rgba(255,255,255,.09);
+  border:3px solid rgba(212,175,55,.5);
+  border-radius:25px;
+  padding:36px 28px;
+  min-width:110px;
+  backdrop-filter:blur(15px);
+}
+
+.cd-num{
+  font-family:'Cinzel',serif;
+  font-size:clamp(2.4rem,6vw,4rem);
+  font-weight:900;
+  color:var(--light-gold);
+}
+
+.cd-lbl{
+  font-size:.75rem;
+  letter-spacing:.5em;
+  color:rgba(255,255,255,.8);
+  font-family:'Cinzel',serif;
+  margin-top:14px;
+  text-transform:uppercase;
+  font-weight:700
+}
+
+.details-section{
+  background:linear-gradient(135deg, var(--dark-cream) 0%, #faf4e6 100%);
+  padding:100px 24px;
+  border-top:3px solid var(--peacock-teal);
+  border-bottom:3px solid var(--peacock-teal)
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:32px;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+.card{
+  background:linear-gradient(135deg, #fff 0%, #faf8f3 100%);
+  border-radius:28px;
+  padding:44px 32px;
+  text-align:center;
+  border:3px solid rgba(77,184,212,.2);
+  box-shadow:0 10px 40px rgba(0,0,0,.1);
+}
+
+.hl{
+  font-size:1.6rem;
+  font-weight:800;
+  color:var(--peacock-dark);
+  margin:12px 0;
+}
+
+.rsvp-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  background:linear-gradient(135deg, var(--peacock-teal), var(--peacock-cyan));
+  color:#fff;
+  text-decoration:none;
+  padding:18px 48px;
+  border-radius:60px;
+  font-family:'Cinzel',serif;
+  font-size:1rem;
+  letter-spacing:.12em;
+  font-weight:700;
+  box-shadow:0 10px 32px rgba(77,184,212,.35);
+}
+
+footer{
+  background:linear-gradient(135deg, var(--peacock-dark) 0%, var(--peacock-teal) 100%);
+  text-align:center;
+  padding:80px 24px;
+  border-top:3px solid var(--gold)
+}
+
+/* Updated Falling Element Style */
+.petal {
   position: fixed;
-  top: -10%;
-  z-index: 1;
   pointer-events: none;
-  user-select: none;
-  animation: fall linear forwards;
+  animation: fall linear infinite;
+  z-index: 100; /* Ensure they fall over content */
+  opacity: 0.5;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
-@keyframes fall {
-  0% { transform: translateY(0vh) rotate(0deg) translateX(0px); opacity: 0; }
-  10% { opacity: var(--max-opac); }
-  90% { opacity: var(--max-opac); }
-  100% { transform: translateY(110vh) rotate(720deg) translateX(50px); opacity: 0; }
+@media(max-width:768px){
+  .names{font-size:2.8rem}
+  .cd-box{min-width:90px;padding:24px 18px}
 }
-
-/* Photo Styling */
-.photo-wrap {
-  position: relative;
-  z-index: 5;
-  width: 220px;
-  height: 220px;
-  margin-bottom: 30px;
-}
-
-.photo-wrap img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--gold);
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
-}
-
-.ring-anim {
-  position: absolute;
-  inset: -15px;
-  border: 2px dashed var(--gold);
-  border-radius: 50%;
-  animation: spin 20s linear infinite;
-  opacity: 0.6;
-}
-
-@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-/* Typography */
-.names {
-  font-family: 'Dancing Script', cursive;
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  color: var(--light-gold);
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-  margin: 15px 0;
-}
-
-.countdown-container {
-  display: flex;
-  gap: 15px;
-  margin-top: 30px;
-  z-index: 5;
-}
-
-.cd-box {
-  background: var(--glass);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--glass-border);
-  padding: 15px;
-  border-radius: 12px;
-  min-width: 70px;
-}
-
-.cd-num { font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--gold); display: block; }
-.cd-lbl { font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; }
-
-.details-card {
-  background: var(--glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  padding: 30px;
-  border-radius: 20px;
-  margin: 40px 20px;
-  max-width: 500px;
-  z-index: 5;
-  position: relative;
-}
-
-.rsvp-btn {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--peacock-dark);
-  padding: 15px 35px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-family: 'Cinzel', serif;
-  font-weight: bold;
-  margin-top: 20px;
-  transition: transform 0.3s ease;
-}
-
-.rsvp-btn:hover { transform: scale(1.05); }
-
 </style>
 </head>
 <body>
-
-<div id="ambient-container"></div>
+<div id="petals"></div>
 
 <section class="hero">
-  <div class="photo-wrap">
-    <div class="ring-anim"></div>
-    <img src="IMG20260426193321.jpg" alt="Muthumaari & Sambathraj">
+  <div class="peacock-feathers">
+    <div class="feather feather-1">🦚</div>
+    <div class="feather feather-2">🦚</div>
+    <div class="feather feather-3">🪷</div>
+    <div class="feather feather-4">🪷</div>
   </div>
-
-  <p style="font-family:'Cinzel'; letter-spacing: 4px; color: var(--gold); font-size: 0.8rem;">THE ENGAGEMENT OF</p>
-  <h1 class="names">Muthumaari & Sambathraj</h1>
   
-  <div class="countdown-container">
-    <div class="cd-box"><span class="cd-num" id="d">00</span><span class="cd-lbl">Days</span></div>
-    <div class="cd-box"><span class="cd-num" id="h">00</span><span class="cd-lbl">Hrs</span></div>
-    <div class="cd-box"><span class="cd-num" id="m">00</span><span class="cd-lbl">Min</span></div>
-    <div class="cd-box"><span class="cd-num" id="s">00</span><span class="cd-lbl">Sec</span></div>
+  <div class="peacock-corner tl">🦚</div>
+  <div class="peacock-corner tr">🦚</div>
+  
+  <p class="badge">🌸 With Divine Blessings of Lord Krishna 🌸</p>
+  <div class="om">ॐ</div>
+  
+  <div class="photo-wrap">
+    <div class="ring"></div>
+    <img id="couple-img" src="IMG20260426193321.jpg" alt="Muthumaari & Sambathraj">
+  </div>
+  
+  <div style="height:32px"></div>
+  <p class="badge">💍 Engagement Invitation 💍</p>
+  <h1 class="names">Muthumaari<span class="amp">&amp;</span>Sambathraj</h1>
+  <div class="divider"><div class="dot"></div></div>
+  <p style="font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: white; font-style: italic;">"Where there is love, there is Krishna's blessing"</p>
+  <div class="date-badge">29 MAY 2026 · 9:30 AM</div>
+</section>
+
+<div class="cd-section">
+  <p class="cd-lbl" style="color:var(--gold); margin-bottom:10px;">Time Until The Celebration</p>
+  <h2 style="font-family:'Cinzel'; color:white; font-size: 2rem;">Counting Down The Days</h2>
+  <div class="cd-grid">
+    <div class="cd-box"><div class="cd-num" id="cd-days">--</div><div class="cd-lbl">DAYS</div></div>
+    <div class="cd-box"><div class="cd-num" id="cd-hours">--</div><div class="cd-lbl">HOURS</div></div>
+    <div class="cd-box"><div class="cd-num" id="cd-mins">--</div><div class="cd-lbl">MINUTES</div></div>
+    <div class="cd-box"><div class="cd-num" id="cd-secs">--</div><div class="cd-lbl">SECONDS</div></div>
+  </div>
+</div>
+
+<section class="details-section">
+  <div class="cards">
+    <div class="card">
+      <div style="font-size:2.5rem; margin-bottom:15px;">📅</div>
+      <h3>Date</h3>
+      <p class="hl">Thursday</p>
+      <p>29th May, 2026</p>
+    </div>
+    <div class="card">
+      <div style="font-size:2.5rem; margin-bottom:15px;">⏰</div>
+      <h3>Time</h3>
+      <p class="hl">9:30 AM</p>
+      <p>to 10:30 AM</p>
+      <p style="font-size:.9rem;color:#bbb;margin-top:10px;font-style:italic">Auspicious Muhurat</p>
+    </div>
+    <div class="card">
+      <div style="font-size:2.5rem; margin-bottom:15px;">📍</div>
+      <h3>Venue</h3>
+      <p class="hl">Navneetha Krishna Kovil Mahal</p>
+      <p>Sengottai</p>
+    </div>
   </div>
 
-  <div class="details-card">
-    <h2 style="font-family:'Cinzel'; color: var(--gold); margin-bottom: 15px;">Save The Date</h2>
-    <p style="font-size: 1.4rem;">MAY 29, 2026</p>
-    <p style="font-style: italic; opacity: 0.8; margin: 10px 0;">9:30 AM - 10:30 AM</p>
-    <p style="margin-top: 15px; font-weight: bold;">Navneetha Krishna Kovil Mahal</p>
-    <p style="font-size: 0.9rem; opacity: 0.7;">Sengottai</p>
-    
-    <a href="https://wa.me/919688849589" class="rsvp-btn">RSVP ON WHATSAPP</a>
+  <div style="text-align:center; margin-top:80px; padding:0 20px;">
+    <h2 style="font-family:'Cinzel'; color:var(--peacock-dark); margin-bottom:30px;">Join Us In Celebration</h2>
+    <p style="font-size:1.3rem; line-height:2.4; color:var(--mid); font-style:italic; max-width:750px; margin:0 auto;">
+      With the grace of Lord Krishna and the blessings of our families, we joyfully announce the engagement of
+      <strong style="color:var(--peacock-dark)">Muthumaari</strong> and
+      <strong style="color:var(--peacock-dark)">Sambathraj</strong>.<br/><br/>
+      We humbly request your presence and blessings to make this sacred occasion truly memorable.
+    </p>
   </div>
 </section>
 
+<section style="text-align:center; padding:100px 24px; background:#fdf8ef; border-top:3px dashed var(--gold);">
+  <h2 style="font-family:'Cinzel'; margin-bottom:40px;">RSVP Via WhatsApp</h2>
+  <div style="max-width:580px; margin:0 auto; padding:60px 48px; background:white; border:4px solid var(--gold); border-radius:32px;">
+    <p style="font-size:1.25rem; color:var(--mid); margin-bottom:36px; font-style:italic;">Your blessings and presence mean the world to us.</p>
+    <a class="rsvp-btn" href="https://wa.me/919688849589" target="_blank">
+      RSVP via WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p style="font-family:'Dancing Script'; font-size:2.2rem; color:var(--light-gold);">Muthumaari & Sambathraj</p>
+  <p style="color:var(--gold); font-size:1.3rem; margin:15px 0;">29 · 05 · 2026</p>
+  <p style="color:white; opacity:0.7;">Navneetha Krishna Kovil Mahal, Sengottai</p>
+</footer>
+
 <script>
-// Countdown Timer
-function updateTimer() {
-  const target = new Date('May 29, 2026 09:30:00').getTime();
-  const now = new Date().getTime();
-  const diff = target - now;
-
-  if (diff > 0) {
-    document.getElementById('d').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-    document.getElementById('h').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    document.getElementById('m').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    document.getElementById('s').innerText = Math.floor((diff % (1000 * 60)) / 1000);
-  }
+function updateCountdown(){
+  const targetDate=new Date('2026-05-29T09:30:00').getTime(),now=new Date().getTime(),diff=targetDate-now;
+  if(diff<=0){['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id=>document.getElementById(id).textContent='00');return}
+  document.getElementById('cd-days').textContent=String(Math.floor(diff/86400000)).padStart(2,'0');
+  document.getElementById('cd-hours').textContent=String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');
+  document.getElementById('cd-mins').textContent=String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+  document.getElementById('cd-secs').textContent=String(Math.floor((diff%60000)/1000)).padStart(2,'0');
 }
-setInterval(updateTimer, 1000);
-updateTimer();
+setInterval(updateCountdown,1000);
+updateCountdown();
 
-// Falling Elements (Feathers & Petals)
-const container = document.getElementById('ambient-container');
-const items = ['🦚', '🌸', '🍃', '✨']; // Peacock feather, petal, leaf, spark
-
-function createFallingItem() {
-  const el = document.createElement('div');
-  const type = items[Math.floor(Math.random() * items.length)];
+// Updated script for falling petals and feathers
+const emojis=['🌸','🪷','✨','🦚'], petalsContainer=document.getElementById('petals');
+for(let i=0;i<50;i++){
+  const petal=document.createElement('div');
+  const type = emojis[Math.floor(Math.random()*emojis.length)];
+  petal.className='petal';
+  petal.textContent=type;
   
-  el.className = 'falling-element';
-  el.innerText = type;
+  // Make feathers specifically lighter in opacity as requested
+  const opacity = (type === '🦚') ? (0.1 + Math.random() * 0.2) : (0.3 + Math.random() * 0.4);
   
-  // Randomize visuals
-  const size = Math.random() * (1.5 - 0.5) + 0.5;
-  const left = Math.random() * 100;
-  const duration = Math.random() * (15 - 7) + 7;
-  const opacity = type === '🦚' ? 0.2 : 0.4; // Feathers are more subtle
-
-  el.style.left = left + 'vw';
-  el.style.fontSize = size + 'rem';
-  el.style.animationDuration = duration + 's';
-  el.style.setProperty('--max-opac', opacity);
-  
-  container.appendChild(el);
-
-  // Remove element after animation ends to save memory
-  setTimeout(() => { el.remove(); }, duration * 1000);
+  petal.style.cssText=`
+    left:${Math.random()*100}vw;
+    font-size:${0.8+Math.random()*1.2}rem;
+    animation-duration:${12+Math.random()*20}s;
+    animation-delay:${Math.random()*15}s;
+    opacity:${opacity};
+  `;
+  petalsContainer.appendChild(petal);
 }
-
-// Generate items continuously
-setInterval(createFallingItem, 400);
 </script>
-
 </body>
 </html>
